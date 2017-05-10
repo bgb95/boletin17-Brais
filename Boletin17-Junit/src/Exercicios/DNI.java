@@ -5,9 +5,19 @@ public class DNI {
 			"V", "H", "L", "C", "K", "E" };
 
 	public boolean eValido(String numeroLetra) {
-	
-		return false;
+		if (numeroLetra.length() == 9) {
+			char[] arrayChar = numeroLetra.toCharArray();
+			for (int i = 0; i <= arrayChar.length; i++) {
+				if (i < 8)
+					if (arrayChar[i] < '1' && arrayChar[i] > '9')
+						return false;
+				if (i == 8)
+					if (arrayChar[i] < 'A' && arrayChar[i] < 'Z')
+						return false;
+			}
+			return true;
+		} else
+			return false;
 	}
-	
-	
+
 }
