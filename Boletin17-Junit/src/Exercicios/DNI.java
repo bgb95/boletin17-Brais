@@ -19,5 +19,9 @@ public class DNI {
 		} else
 			return false;
 	}
-
+	
+	/*public int calculaLetra(String numero) {
+		int resultado;
+		
+	}*/
 }
