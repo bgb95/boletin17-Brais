@@ -44,12 +44,19 @@ public class XeometriaTest {
 		assertEquals(prueba.areaCadrado(-20), 0);
 		assertEquals(prueba.areaCadrado(-1), 0);
 	}
-	
+
 	@Test
 	public void testteoremaPitagoras() {
-		assertEquals(prueba.teoremaPitagoras(-1,1), 0,0.001);
-		assertEquals(prueba.teoremaPitagoras(1,-1), 0, 0.001);
-		assertEquals(prueba.teoremaPitagoras(1,1), Math.sqrt(2), 0.001);
-		assertEquals(prueba.teoremaPitagoras(2,5), Math.sqrt(29), 0.001);
+		assertEquals(prueba.teoremaPitagoras(-1, 1), 0, 0.001);
+		assertEquals(prueba.teoremaPitagoras(1, -1), 0, 0.001);
+		assertEquals(prueba.teoremaPitagoras(1, 1), Math.sqrt(2), 0.001);
+		assertEquals(prueba.teoremaPitagoras(2, 5), Math.sqrt(29), 0.001);
+	}
+
+	public void testteoremaPitagoras2() {
+		assertEquals(prueba.teoremaPitagoras2(2, 10), 0, 0.001);
+		assertEquals(prueba.teoremaPitagoras2(1, -1), 0, 0.001);
+		assertEquals(prueba.teoremaPitagoras2(-1, 1), 0, 0.001);
+		assertEquals(prueba.teoremaPitagoras2(2, 5), Math.sqrt(29), 0.001);
 	}
 }
