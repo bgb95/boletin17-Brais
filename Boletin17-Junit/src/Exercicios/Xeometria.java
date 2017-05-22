@@ -1,9 +1,6 @@
 package Exercicios;
 /**
- * Principal.java
- * 
- * Representa la clase principal del proyecto
- * 
+ * Principal.java 
  * @author: Brais Garrido Blanco
  * @version: 18/05/2017
  */
@@ -37,7 +34,7 @@ public class Xeometria {
 	 * Constructor que define o teorema de pitágoras
 	 * @param catetoA Define o valor do primeiro cateto
 	 * @param catetoB Define o valor do segundo cateto
-	 * @return O valor da hipotenusa basándose no teorema de pitágoras.
+	 * @return O valor da hipotenusa basándose no teorema de pitágoras
 	 */
 	public double teoremaPitagoras(int catetoA, int catetoB) {
 		double hipotenusa;
@@ -51,10 +48,10 @@ public class Xeometria {
 	}
 
 	/**
-	 * 
-	 * @param hipotenusa
-	 * @param catetoA
-	 * @return
+	 * Constructor que define o teorema de pitágoras despexado
+	 * @param hipotenusa Define o valor da hipotenusa
+	 * @param catetoA Define o valor do primeiro cateto
+	 * @return O valor do segundo cateto despexando a fórmula do teorema de pitágoras
 	 */
 	public double teoremaPitagoras2(double hipotenusa, double catetoA) {
 		double catetoB;
@@ -65,5 +62,5 @@ public class Xeometria {
 			catetoB = Math.sqrt(catetoA * catetoA + hipotenusa * hipotenusa);
 			return catetoB;
 		}
-	}
-}
+	}//Cierre de los métodos
+}//Cierre de la clase
