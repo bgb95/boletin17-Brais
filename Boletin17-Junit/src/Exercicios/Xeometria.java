@@ -2,7 +2,6 @@ package Exercicios;
 /**
  * Principal.java 
  * @author: Brais Garrido Blanco
- * @version: 18/05/2017
  */
 public class Xeometria {
 	//Campos da clase
