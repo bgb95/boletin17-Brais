@@ -7,6 +7,7 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import java.util.ArrayList;
 
 public class DNITest {
 	DNI prueba = new DNI();
@@ -56,12 +57,45 @@ public class DNITest {
 
 	@Test
 	public void testEValidoArrayListOfIntegerChar() {
-		fail("Not yet implemented");
+		ArrayList<Integer> numeros = new ArrayList<Integer>();
+		numeros.add(0,1);
+		numeros.add(1,2);
+		numeros.add(2,3);
+		numeros.add(3,4);
+		numeros.add(4,5);
+		numeros.add(5,0);
+		numeros.add(6,7);
+		numeros.add(7,8);
+		assertEquals(prueba.eValido(numeros,'N'),true);
+		numeros.remove(5); 
+		numeros.add(5,63);
+		assertEquals(prueba.eValido(numeros,'N'),false);
+		numeros.remove(5); 
+		numeros.add(5,6);
+		assertEquals(prueba.eValido(numeros,'N'),false);
+		numeros.add(8,9);
+		assertEquals(prueba.eValido(numeros,'N'),false);
 	}
 
 	@Test
 	public void testCalculaLetraArrayListOfInteger() {
-		fail("Not yet implemented");
+		ArrayList<Integer> numeros = new ArrayList<Integer>();
+		numeros.add(0,1);
+		numeros.add(1,2);
+		numeros.add(2,3);
+		numeros.add(3,4);
+		numeros.add(4,5);
+		numeros.add(5,0);
+		numeros.add(6,7);
+		numeros.add(7,8);
+		assertEquals(prueba.calculaLetra(numeros),12);
+		numeros.remove(5); 
+		numeros.add(5,63);
+		assertEquals(prueba.calculaLetra(numeros),-1);
+		numeros.remove(5);
+		numeros.add(5,0);
+		numeros.add(8,9);
+		assertEquals(prueba.calculaLetra(numeros),-1);
 	}
 
 }
